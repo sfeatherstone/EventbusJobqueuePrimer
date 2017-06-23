@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
         but.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //Create an object that also subscribes to the MyEventMessage event.
                 sink = new Sink(getApplicationContext());
             }
         });
@@ -44,6 +45,11 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
+
+        //Clean up sink object
+        if (sink!=null) {
+            sink.unregister();
+        }
 
         //Don't forget to unregister from EventBus
         EventBus.getDefault().unregister(this);

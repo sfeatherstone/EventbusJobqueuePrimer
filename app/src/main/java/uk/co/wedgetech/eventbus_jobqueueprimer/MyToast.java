@@ -6,7 +6,7 @@ import android.os.Looper;
 import android.support.annotation.StringRes;
 import android.widget.Toast;
 
-
+//Simple Toast utility class
 class MyToast {
 
     void show(final Context context, final String message) {

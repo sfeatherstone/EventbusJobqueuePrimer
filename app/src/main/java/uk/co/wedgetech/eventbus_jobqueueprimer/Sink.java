@@ -21,4 +21,8 @@ public class Sink {
         new MyToast().show(appContext, "Class:" + message.getMessage());
     }
 
+    public void unregister() {
+        EventBus.getDefault().unregister(this);
+    }
+
 }

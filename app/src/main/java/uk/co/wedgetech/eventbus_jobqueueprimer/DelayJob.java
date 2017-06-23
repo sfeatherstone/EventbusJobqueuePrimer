@@ -31,7 +31,6 @@ public class DelayJob extends Job {
 
     @Override
     protected void onCancel(int i, @Nullable Throwable throwable) {
-
     }
 
     @Override
